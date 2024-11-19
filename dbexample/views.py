@@ -10,4 +10,8 @@ def addstudent(request):
     s.save()
     res = Student.objects.all().values()
     print(res)
-    return HttpResponse(res)
+    todelete = Student.objects.all()[0]
+    todelete.delete()
+    res2 = Student.objects.all().values()
+    print(res2)
+    return HttpResponse(res2)
