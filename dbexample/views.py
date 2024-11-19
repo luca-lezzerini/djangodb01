@@ -8,6 +8,6 @@ from dbexample.models import Student
 def addstudent(request):
     s = Student(firstname="Ledio",lastname="Hoxha",studentID=1000)
     s.save()
-    res = Student.objects.all()
+    res = Student.objects.all().values()
     print(res)
     return HttpResponse(res)
