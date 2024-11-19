@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 from dbexample.models import Student
@@ -7,3 +8,6 @@ from dbexample.models import Student
 def addstudent(request):
     s = Student(firstname="Ledio",lastname="Hoxha",studentID=1000)
     s.save()
+    res = Student.objects.all()
+    print(res)
+    return HttpResponse(res)

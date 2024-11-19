@@ -12,3 +12,7 @@ class Course(models.Model):
     title=models.CharField(max_length=255)
     code=models.CharField(max_length=10)
     credits = models.IntegerField()
+
+
+class Class(models.Model):
+    code=models.CharField(max_length=10)
