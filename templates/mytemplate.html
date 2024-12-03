@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students List</title>
+</head>
+<body>
+<ul>
+    {% for x in students %}
+    <li>{{x.id}} - {{ x.firstname }} {{ x.lastname }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
